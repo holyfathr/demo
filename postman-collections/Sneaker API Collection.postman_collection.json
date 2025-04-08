@@ -1,0 +1,189 @@
+{
+    "info": {
+        "_postman_id": "your-collection-id",
+        "name": "Sneaker API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Core Service",
+            "item": [
+                {
+                    "name": "Get all sneakers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Get sneaker by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8081/api/sneakers/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["api", "sneakers", "1"]
+                        }
+                    }
+                },
+                {
+                    "name": "Add sneaker",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"model\": \"Nike Air Max\",\n    \"releaseDate\": \"2023-01-01\",\n    \"brand\": \"Nike\",\n    \"price\": 199.99,\n    \"size\": 42\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8081/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Update sneaker",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": 1,\n    \"model\": \"Updated Nike Air Max\",\n    \"releaseDate\": \"2023-01-01\",\n    \"brand\": \"Nike\",\n    \"price\": 199.99,\n    \"size\": 42\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8081/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete sneaker",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8081/api/sneakers/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8081",
+                            "path": ["api", "sneakers", "1"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "API Gateway",
+            "item": [
+                {
+                    "name": "Get all sneakers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Get sneaker by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/api/sneakers/2",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["api", "sneakers", "2"]
+                        }
+                    }
+                },
+                {
+                    "name": "Add sneaker",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"model\": \"Adidas Superstar\",\n    \"releaseDate\": \"2023-02-01\",\n    \"brand\": \"Adidas\",\n    \"price\": 149.99,\n    \"size\": 43\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Update sneaker",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": 2,\n    \"model\": \"Updated Adidas Superstar\",\n    \"releaseDate\": \"2023-02-01\",\n    \"brand\": \"Adidas\",\n    \"price\": 149.99,\n    \"size\": 43\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/api/sneakers",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["api", "sneakers"]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete sneaker",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/api/sneakers/2",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8080",
+                            "path": ["api", "sneakers", "2"]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

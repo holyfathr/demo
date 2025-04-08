@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: core-service
+
+  datasource:
+    password: "${SPRING_DATASOURCE_USERNAME:user}"
+    username: "${SPRING_DATASOURCE_PASSWORD:password}"
+    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/db}"
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: /

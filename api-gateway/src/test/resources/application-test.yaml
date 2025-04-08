@@ -1,0 +1,2 @@
+core-service:
+  url: "${CORE_SERVICE_URL:http://localhost:8081/api}"

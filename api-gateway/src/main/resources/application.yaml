@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 8080
+
+core-service:
+  url: "${CORE_SERVICE_URL:http://localhost:8081/api}"
+
+springdoc:
+  swagger-ui:
+    path: /
+    default-models-expand-depth: -1
